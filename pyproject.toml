@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "django_project"
+version = "1.0.0"
+description = "Django project"
+authors = ["Your Name <you@example.com>"]
+license = "no"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.12.2"
+django = "^5.0.6"
+requests = "^2.32.3"
+djangorestframework = "^3.15.1"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.2"
+
+
+[tool.poetry.group.lint.dependencies]
+flake8 = "^7.0.0"
+
+[tool.poetry.scripts]
+start-tests = 'tests.test_utils:main'
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
